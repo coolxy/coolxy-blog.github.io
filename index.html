@@ -1,52 +1,348 @@
----
-layout: default
----
 
+<!DOCTYPE html>
+<html lang="zh-CN">
 
+<head>
+    <!--link rel="stylesheet" href="./css/bootstrap.min.css"><link rel="stylesheet" href="./css/style.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"-->
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
 
-{% assign trans = site.data.values[site.lan] %}
-{% for post in paginator.posts %}
-<div class="well article">
+    <title>长鸿服务器</title>
+    <meta name="description"
+        content="长鸿博客www.coolxy.cn">
+    <meta name="keywords" content="这里是长鸿自己的服务器！！">
+    <link rel="stylesheet" type="text/css" href="./css/FiraCode.css">
+    <link rel="stylesheet" type="text/css" href="./css/nutssss.css">
+    <link rel="icon" href="./img/ico.png">
+</head>
 
-    <span class="post-date">
-        <!--
-        {% assign d = post.date | date: "%d" | plus:'0' %}
-        {{ post.date | date: "%B" }}
-        {% case d %}
-        {% when 1 or 21 or 31 %}{{ d }}st,
-        {% when 2 or 22 %}{{ d }}nd,
-        {% when 3 or 23 %}{{ d }}rd,
-        {% else %}{{ d }}th,
-        {% endcase %}
-        {{ post.date | date: "%Y" }}
-        -->
-        {% assign date_format = site.date_format.title %}
-        {{ post.date | date: date_format }}
-    </span>
-    
-    <h2>
-        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-    </h2>
-    
-    <div class="post-description">
-        {{ post.description }}
+<body><!--  style="filter: grayscale(100%);"-->
+ <!--center><h2><a href='http://www.gov.cn/xinwen/2022-11/30/content_5729659.htm' target="_blank">沉痛哀悼江泽民同志！江泽民同志永垂不朽！</a></h2></center-->
+<!--div id="stage" class="container">
+    <div class="row">
+        <div id="side-bar" class="col-sm-3 col-xs-12 side-container invisible">
+            <div class="vertical-text site-title"><h3 tabindex="-1" class="site-title-small"><a href="/" class="a-title">夜披星光，远赴千里</a></h3><h1 tabindex="-1" class="site-title-large"><a href="/" class="a-title">星夜长鸿</a></h1>
+            </div><br class="visible-lg visible-md visible-sm">
+        </div>
     </div>
-    
-</div>
-{% endfor %}
+</div><script src="./js/jquery.min.js"></script><script src="./js/jquery-migrate.min.js"></script><script src="./js/typography.min.js"></script-->
 
-<div class="pagination">
-  {% if paginator.previous_page %}
-      {% if paginator.previous_page == 1 %}
-        <a class="btn btn-default" href="{{ site.baseurl}}/index.html" class="previous">Newer</a>
-      {% else %}
-        <a class="btn btn-default" href="{{ site.baseurl}}/page{{ paginator.previous_page }}" class="previous">Newer</a>
-      {% endif %}
-  {% endif %}
-  <span class="page_number ">{{ trans.page }}: {{ paginator.page }} of {{ paginator.total_pages }}</span>
-  {% if paginator.next_page %}
-    <a class="btn btn-default" href="{{ site.baseurl}}/page{{ paginator.next_page }}" class="next">Older</a>
-  {% endif %}
-</div>
+    <div id="box">
+        <!-- 个人资料卡片 -->
+        <div class="meBox">
+            <!-- 头像 -->
+            <div class="headPhoto" ><img src="./img/tx.png"></div>
+            <!-- 介绍 -->
+            <div class="meBox-title">
+                <p>长鸿导航!~</p>
+                <div class="fg"></div>
+            </div>
+            <div class="meBox-text">
+                <p>新·开始<img src="./img/fish.png" alt="咸鱼" style="width: 20px; vertical-align: middle;"></p>
+                <p>小时候词不达意</p>
+                <p>长大了言不由衷<img src="./img/002.png" alt="冰激凌" style="width: 15px; vertical-align: middle;"></p>
+            </div>
+            <!-- 两个按钮 -->
+            <div class="meBox-Button">
+                <a href="https://www.coolxy.cn" target="_blank">个人博客</a>
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=258901523&site=qq&menu=yes" target="_blank">QQ联系</a>
+            </div>
+        </div>
+        <!-- 伪终端介绍 -->
+        <div id="cmdBox">
+            <!-- 第一个终端 -->
+            <div class="cmd">
+                <!-- 三个按钮 -->
+                <div class="click">
+                    <div class="red"></div>
+                    <div class="yellow"></div>
+                    <div class="green"></div>
+                </div>
+                <!-- 顶部标题 -->
+                <div class="title">
+                    <span>chserver - bash</span>
+                </div>
+                <!-- 终端内文字 -->
+                <div class="cmdText">
+                    <span style="color: rgb(0, 190, 0);">root@chserver:~#</span>
+                    <span style="color: blue;"></span>
+                    <span style="color: rgb(39, 39, 39);">./tianqi.sh</span>
+                    <br />
+                    <iframe scrolling="no" src="https://tianqiapi.com/api.php?style=tc&skin=pitaya" frameborder="0"
+                        width="350" height="24" allowtransparency="true"></iframe>
+                       
+                    <br />
+                    
+                    <span style="color: rgb(0, 190, 0);">root@chserver:~#</span>
+                    <span style="color: blue;"></span>
+                    <span style="color: rgb(39, 39, 39);">./IP.sh</span>
+                    <br />
+                    <iframe scrolling="no" src="https://myip4.ipip.net/" frameborder="0"
+                        width="350" height="24" allowtransparency="true"></iframe>
+                       
+                    <br />
+                    <span style="color: rgb(0, 190, 0);">root@chserver:~#:</span>
+                    <!--span style="color: blue;">~#</span-->
+                    <span style="color: rgb(39, 39, 39);">cat /aboutme.txt</span>
+                    <p><a href="http://www.coolxy.top">爱好计算机，会去自学自己感兴趣的一切东西</a></p>
+                    <p>多年前接触Linux，现在一直在使用；爱好折腾去解决一切问题</p>
+                    <p>瞎球搞是我的最爱</p>
+                    <p>这条路我才刚刚迈开了我的第一步</p>
+                    <p>路上的坎一定会非常多，但</p>
+                    <p>在我眼里</p>
+                    <p>没有什么问题是尝试不能解决的，如果有那就多尝试几次甚至上百次</p>
+                    <p>即使前方的路看似绝境，也要有硬生生给自己开出一条路的勇气</p>
+                    <span style="color: rgb(0, 190, 0);">root@chserver:~#</span>
+                    <span style="color: blue;"></span>
+                    <span style="color: rgb(39, 39, 39);">sudo rm -rf /过去的自己/*</span>
+			<br /><span style="color: rgb(0, 190, 0);">root@chserver:~#</span>
+                    <span style="color: blue;"></span>
+			<span style="color: rgb(39, 39, 39);">apt install Beautiful-Future</span>
+			<br /><span style="color: rgb(39, 39, 39);">Reading package lists... <font color=green>Done</font></span>
+			<br /><span style="color: rgb(39, 39, 39);">Your Beautiful-Future installed</span>
+                </div>
+            </div>
 
+            <!-- 第二个终端 -->		
+            
+            <div class="cmd cmd2">
+                <!-- 三个按钮 -->
+                <div class="click">
+                    <div class="red"></div>
+                    <div class="yellow"></div>
+                    <div class="green"></div>
+                </div>
+                <!-- 顶部标题 -->
+                <div class="title">
+                    <span>chserver - bash</span>
+                </div>
+   <script>
+        var host = window.location.hostname;
+        var local_port = window.location.port; //获取端口
+        var domain = document.domain;
+        var xieyi = location.protocol; //获取页面协议：http、https
+        var zhuji = domain.split('.').slice(-2).join('.');//+domain.split('.')[-1];
+        //document.write(zhuji);
+        //document.write(port);
+        //document.write(domain);
 
+    	//document.write(domain);
+		function replace_port(name,port)
+		{
+			if (host == '192.168.1.1')
+			{
+				switch (port)
+				{
+					case 58088:
+						url='http://reader.coolxy.top:90';
+						break;
+					case 59980:
+						url='http://'+host+':9980';
+						break;
+					case 58081:
+						url='http://'+host+':8081';
+						break;
+					case 59091:
+						url='http://'+host+':9091';
+						break;
+					case 55701:
+						url='http://'+host+':5700';
+						break;
+					case 62017:
+						url= 'http://'+host+':2017';
+						break;
+					case 8000:
+						url= 'http://n.coolxy.top:'+port;
+						break;
+					case 9443:
+						url= 'https://bw.coolxy.top:'+port;
+						break;
+					case 8008:
+						url= 'http://'+host+':'+port;
+						break;
+                         //		case 81:
+				//		url= 'http://'+host+':'+port;
+					//	break;
+					//case 82:
+                                        //url= 'http://'+host+':'+port;
+//						break;
+//					case 86:
+	//					url= 'http://'+host+':'+port;
+		//				break;
+					case 90:
+						url= 'http://'+host+'/'+name+'/';
+						break;
+					default:
+						url = 'http://'+host+':'+port;
+				}
+			}
+			else
+			{
+				switch (name)
+                {
+					case 'ql':
+					    url = 'http://'+domain+':'+port;
+                    	break;				
+					case 'bw':
+						url='https://'+name+'.'+zhuji+':'+port;
+						break;
+					case 'x-ui':
+						url='http://'+domain+':'+port;
+						break;
+                    case 'n':
+                        url = xieyi+'//'+domain+':'+port;
+                        break;
+                    case '':
+                        url = xieyi+'//'+domain+':'+port;
+                        break;
+                    default:
+						url = xieyi+'//'+[name,zhuji].join('.')+':'+local_port;	//替换端口并返回	
+				}
+			}
+			return url
+		}
+	</script>
+                <!-- 终端内文字 -->
+                <div class="cmdText">
+                    <span style="color: rgb(0, 190, 0);">root@chserver:~#</span>
+                    <span style="color: blue;"></span>
+                    <span style="color: rgb(39, 39, 39);">./links.sh</span>
+                    <ul class="ul">
+					<table>
+						<tr>
+							<td><li><a href="http://n.coolxy.top:90/fupin/" target="_blank"><h4>贫困户信息</h4></a></li></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+							<script>document.write('<td><li><a href='+replace_port('file',90)+' target="_blank"><font color=red><h4>我的文件</h4></font></a></li></td>');</script><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td><li><a href="http://n.coolxy.top:90/phpmyadmin/" target="_blank"><h4>数据库</h4></a></li></td>
+						</tr>
+						<tr>
+							
+                       
+						   <td><script>document.write('<li><a href='+replace_port('',52017)+' target="_blank"><h4>Fly</h4></a></li>');</script>
+                           </td>
+				            <td> </td>
+							<td><li><a href="/aria2/" target="_blank"><h4>Aria2</h4></a></li></td><td></td><td><li><a href="/yacd/" target="_blank"><h4>Yacd</h4></a></li></td>
+							
+						</tr>
+							<td>--------</td>
+						<tr>
+					
+						<script>
+							document.write('<td><li><a href='+replace_port('photo',90)+' target="_blank"><font color=red><h4>长鸿相册</h4></font></a></li></td>');
+
+							document.write('<td></td>');
+                         document.write('<td><li><a href='+replace_port('pan',88)+' target="_blank"><font color=green><h4>长鸿网盘</h4></font></a></li></td>');
+                         document.write('<td></td>');
+							document.write('<td><li><a href='+replace_port('music',90)+' target="_blank"><font color=blue><h4>长鸿音乐</h4></font></a></li></td>');
+							
+                         document.write('</tr><tr>');
+                         
+                         document.write('<td><li><a href='+replace_port('reader',58088)+' target="_blank"><font color=red><h4>长鸿阅读</h4></font></a></li></td>');	
+                         document.write('<td></td>');
+                         document.write('<td><li><a href='+replace_port('wiki',82)+' target="_blank"><font color=green><h4>长鸿Wiki</h4></font></a></li></td>');
+                         document.write('<td></td>');
+                         document.write('<td><li><a href='+replace_port('memo',5230)+' target="_blank"><font color=blue><h4>Memo</h4></font></a></li></td>');
+                         
+                         document.write('</tr><tr>');
+                         
+							document.write('<td><li><a href='+replace_port('',9876)+' target="_blank"><font color=red><h4>ddns-go</h4></font></a></li></td>');
+                         document.write('<td></td>');
+                         document.write('<td><li><a href='+replace_port('bw',9443)+' target="_blank"><font color=green><h4>Bitwarden</h4></font></a></li></td>');
+                         document.write('<td></td>');
+                         
+							document.write('</tr><tr>');
+							
+							document.write('<td><li><a href='+replace_port('share',81)+' target="_blank"><font color=red><h4>Alist</h4></font></a></li></td>');
+							document.write('<td></td>');
+							document.write('<td><li><a href='+'http://kod.coolxy.top:90'+' target="_blank"><font color=green><h4>可道云</h4></font></a></li></td>'); //+replace_port('kod',90)+' target="_blank"><font color=red><h4>可道云</h4></font></a></li></td>');
+                         document.write('<td></td>'); 
+                         	document.write('<td><li><a href=http://p.coolxy.top:90 target="blank"><font color=blue><h4>写真</h4></font></a></li></td>'); //+replace_port('p',90)+' target="_blank"><h4>写真</h4></a></li></td>');
+
+							document.write('</tr><tr>');
+							
+                         document.write('<td><li><a href='+replace_port('',9000)+' target="_blank"><font color=red><h4>Docker板</h4></font></a></li></td>');
+                         document.write('<td></td>');
+                         document.write('<td><li><a href='+replace_port('ql',55700)+' target="_blank"><font color=green><h4>青龙面板</h4></font></a></li></td>');
+                         document.write('<td></td>');
+                         document.write('<td><li><a href='+replace_port('',7050)+' target="_blank"><font color=blue><h4>Frps</h4></font></a></li></td>');
+                         document.write('</tr><tr>');
+							
+                        document.write('<td><li><a href='+replace_port('op',8008)+' target="_blank"><font color=red><h4>OpenWrt</h4></font></a></li></td>');
+						  document.write('<td></td>');
+                        document.write('<td><li><a href='+replace_port('server',8082)+' target="_blank"><font color=green><h4>MyServer</h4></font></a></li></td>');
+ 						  document.write('<td></td>');
+                        document.write('<td><li><a href='+replace_port('',99)+'/nps/'+' target="_blank"><font color=blue><h4>NPS</h4></font></a></li></td>');
+                       
+                        document.write('</tr><tr>');
+                        						  
+						  //document.write('<td><li><a href='+replace_port('x-ui',54321)+' target="_blank"><h4>x-ui面板</h4></a></li></td>');
+						  document.write('<td><li><a href='+replace_port('dv',86)+' target="_blank"><font color=red><h4>视频下载</h4></font></a></li></td>');
+						  document.write('<td></td>');
+                        document.write('<td><li><a href='+replace_port('',9091)+' target="_blank"><font color=green><h4>Trans下载</h4></font></a></li></td>');
+                        document.write('<td></td>');
+						  document.write('<td><li><a href='+replace_port('',8089)+' target="_blank"><font color=blue><h4>Qbittorrent</h4></font></a></li></td>');  
+                        document.write('</tr><tr>');
+							document.write('<td><li><a href='+replace_port('',63033)+' target="_blank"><h4>YT-dlp</h4></a></li></td>');
+							//document.write('<td><li><a href='+replace_port('',9980)+' target="_blank"><h4>强国</h4></a></li></td>');
+							//document.write('</tr>');
+						</script>
+                        </tr>
+					</table>
+					                       
+                        <!--li><a href="/tlbb/" target="_blank"><h4>长鸿天龙八部</h4></a></li-->
+                        <!--li><a href="/dashbord/" target="_blank"><h4>clash控制板</h4></a></li-->
+                    			    
+                        <li><a href=# target="_blank"><h4>..dcd555..</h4></a></li>
+                    </ul>
+                    
+                    <span style="color: rgb(0, 190, 0);">root@chserver:~#</span>
+			        <span style="color: blue;"></span>
+                    <span style="color: rgb(39, 39, 39);">./MyTools.sh</span>
+                   
+                    <ul class="ul">
+					<table>
+						<tr>
+							<td><li><a href="http://n.coolxy.top:8123" target="_blank"><h4>HA</h4></a></li></td>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <script>document.write('<td><li><a href='+replace_port('',8022)+' target="_blank"><font color=blue><h4>WEB-SSH</h4></font></a></li></td>'); </script>
+						    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+							<script>document.write('<td><li><a href='+replace_port('',3000)+' target="_blank"><font color=blue><h4>AdGuard</h4></font></a></li></td>'); </script>
+						</tr>
+                        
+                        <tr>
+                            <td><li><a href="http://n.coolxy.top:1880" target="_blank"><h4>NodeRed</h4></a></li></td>
+                            <td></td>
+                            <td><li><a href='http://n.coolxy.top:6052' target='_blank'><h4>ESPHome</h4></a></li></td>
+                            <td></td>
+                            <td><li><a href=/linux-command/ target="_blank"><h4>linux命令</h4></a></li></td>
+                        </tr><tr>
+                            <td><li><a href="http://192.168.1.8:9977" target="_blank"><h4>数据库备份</h4></a></li></td>
+                            <td></td>
+                            <td><li><a href="http://music.coolxy.top" target="_blank"><h4>听音乐</h4></a></li></td>
+                            <td></td>
+                            <td><li><a href="https://chatgpt.coolxy.top" target="_blank"><h4>chatgpt</h4></a></li></td>
+                            
+						</tr>
+							<td><li><a href="/xyz.htm" target="_blank"><h4>3</h4></a></li></td>
+
+                       </tr>
+                       <tr>
+						<td><li><a href="/xyz.htm" target="_blank"><h4>0000</h4></a></li></td>
+					</tr>	
+                    </table>
+                   </ul>
+                    <span style="color: blue;"></span>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+    <!-- 页脚 -->
+    <div id="footer">
+        <p>© 2022 changhong | <a href="https://www.coolxy.cn/">长鸿博客</a></p>
+        <p>THEME MADE BY <a href=".">changhong</a></p>
+        
+    </div>
+</body>
+</html>
