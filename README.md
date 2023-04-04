@@ -1,1 +1,1 @@
-# coolxy.top
+# auto-blog
